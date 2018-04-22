@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Make a Directory in res name it "raw" and paste the mp3 file into it.....mine is god.mp3
                 mediaPlayer=MediaPlayer.create(getApplicationContext(),R.raw.god);
+                
               
 
                     mediaPlayer.start();
