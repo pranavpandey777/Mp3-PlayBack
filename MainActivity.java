@@ -1,4 +1,4 @@
-package com.example.pranav.ptanhikya;
+package com.example.pranav.mp3PlayBack;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -15,22 +15,21 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
     private Button btn;
     private MediaPlayer mediaPlayer;
-   // private MediaController mediaController;
+
     
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // mediaController=new MediaController(this);
+       
 
         btn=findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mediaPlayer=MediaPlayer.create(getApplicationContext(),R.raw.god);
-              //  mediaPlayer.setMediaController(mediaController);
-               // mediaController.setAnchorView(mediaController);
+              
 
                     mediaPlayer.start();
                     Toast.makeText(MainActivity.this, "PlayBack", Toast.LENGTH_SHORT).show();
